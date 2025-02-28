@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_social_links",
+  "info": {
+    "displayName": "social-links",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button"
+    }
+  }
+}

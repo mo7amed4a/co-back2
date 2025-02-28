@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_social_sections",
+  "info": {
+    "displayName": "SocialSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "links": {
+      "displayName": "links",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.links"
+    }
+  }
+}

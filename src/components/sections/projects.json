@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_diplomas",
+  "info": {
+    "displayName": "diplomas",
+    "icon": "chartBubble",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "diplomas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diploma.diploma"
+    }
+  }
+}

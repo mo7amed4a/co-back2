@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_questions",
+  "info": {
+    "displayName": "question",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

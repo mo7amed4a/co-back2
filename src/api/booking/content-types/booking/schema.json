@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "booking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "diplomas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diploma.diploma",
+      "mappedBy": "booking"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

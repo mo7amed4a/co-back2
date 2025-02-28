@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_states",
+  "info": {
+    "displayName": "State",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
