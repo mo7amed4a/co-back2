@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_soons",
+  "info": {
+    "displayName": "soon"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "diploma": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::diploma.diploma"
+    }
+  }
+}

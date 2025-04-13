@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_footer_social_links_footers",
+  "info": {
+    "displayName": "social_links_footer"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string",
+      "default": "https://facebook.com"
+    },
+    "x": {
+      "type": "string",
+      "default": "https://x.com"
+    },
+    "instagram": {
+      "type": "string",
+      "default": "https://instagram.com"
+    }
+  }
+}

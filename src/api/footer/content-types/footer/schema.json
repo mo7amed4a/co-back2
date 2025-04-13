@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptatem doloribus debitis expedita quia delectus placeat cupiditate veniam, sunt dolore."
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.links"
+    },
+    "contact_links": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footer.social-links"
+    },
+    "social_links": {
+      "displayName": "social_links_footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "footer.social-links-footer"
+    }
+  }
+}

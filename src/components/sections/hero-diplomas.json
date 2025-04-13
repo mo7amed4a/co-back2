@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_hero_diplomas",
+  "info": {
+    "displayName": "HeroDiplomas",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Diplomas This is page all diplomas"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "default": "Diplomas This is page all diplomas"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "diplomas_pages",
+  "info": {
+    "singularName": "diplomas-page",
+    "pluralName": "diplomas-pages",
+    "displayName": "Diplomas page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "displayName": "HeroDiplomas",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero-diplomas"
+    }
+  }
+}

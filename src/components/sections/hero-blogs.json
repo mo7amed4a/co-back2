@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_hero_blogs",
+  "info": {
+    "displayName": "HeroBlogs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Blogs This is page all blogs"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "default": "Blogs This is page all blogs"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

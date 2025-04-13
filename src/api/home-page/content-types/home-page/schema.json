@@ -36,6 +36,22 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.blogs"
+    },
+    "coming_soon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.soon"
+    },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.team"
+    },
+    "register": {
+      "displayName": "register",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.register"
     }
   }
 }

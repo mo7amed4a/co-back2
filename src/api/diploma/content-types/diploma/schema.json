@@ -24,27 +24,58 @@
       "type": "blocks"
     },
     "image": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
-    },
-    "images": {
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
+      ]
+    },
+    "images": {
       "type": "media",
-      "multiple": true
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     },
     "booking": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::booking.booking",
       "inversedBy": "diplomas"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "badge": {
+      "type": "string",
+      "minLength": 1,
+      "default": "soon",
+      "maxLength": 40
+    },
+    "discount": {
+      "type": "decimal",
+      "default": 0,
+      "required": false,
+      "min": 0,
+      "max": 100
+    },
+    "video": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
