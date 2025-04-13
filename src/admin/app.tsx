@@ -15,7 +15,7 @@ export default {
     },
     translations: {
       en: {
-        "app.components.HomePage.welcome.again": "Webbing Agency",
+        "app.components.HomePage.welcome.again": "Co Partners",
         "app.components.HomePage.welcomeBlock.content.again":
           "Transforming Ideas into Digital Solutions",
         "app.components.HomePage.button.blog": "Visit Blog",
@@ -33,7 +33,7 @@ export default {
 
         "app.components.LeftMenu.navbrand.workplace": "Testing",
 
-        "Auth.form.welcome.title": "Webbing Agency",
+        "Auth.form.welcome.title": "Co Partners",
 
         "Auth.form.welcome.subtitle": "Login to your account",
 
