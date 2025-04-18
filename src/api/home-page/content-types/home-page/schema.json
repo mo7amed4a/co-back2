@@ -52,6 +52,22 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.register"
+    },
+    "tot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.tot-section"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.logos"
+    },
+    "rating": {
+      "displayName": "rating_section",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.rating-section"
     }
   }
 }

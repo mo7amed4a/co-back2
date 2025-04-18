@@ -381,6 +381,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    about_hero: Schema.Attribute.Component<'sections.hero-blogs', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -605,6 +606,34 @@ export interface ApiDiplomasPageDiplomasPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFeedbackPageFeedbackPage extends Struct.SingleTypeSchema {
+  collectionName: 'feedback_pages';
+  info: {
+    displayName: 'FeedbackPage';
+    pluralName: 'feedback-pages';
+    singularName: 'feedback-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'sections.hero-blogs', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::feedback-page.feedback-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -641,6 +670,41 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFormForm extends Struct.CollectionTypeSchema {
+  collectionName: 'forms';
+  info: {
+    displayName: 'form';
+    pluralName: 'forms';
+    singularName: 'form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String;
+    companySize: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    firstName: Schema.Attribute.String;
+    jobLevel: Schema.Attribute.String;
+    jobTitle: Schema.Attribute.String;
+    lastName: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    peopleToTrain: Schema.Attribute.String;
+    phoneNumber: Schema.Attribute.BigInteger;
+    publishedAt: Schema.Attribute.DateTime;
+    trainingNeeds: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    workEmail: Schema.Attribute.Email;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -667,10 +731,13 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    logos: Schema.Attribute.Component<'home.logos', false>;
     publishedAt: Schema.Attribute.DateTime;
+    rating: Schema.Attribute.Component<'home.rating-section', false>;
     register: Schema.Attribute.Component<'sections.register', false>;
     slider: Schema.Attribute.Component<'slider.slider', true>;
     team: Schema.Attribute.Component<'sections.team', false>;
+    tot: Schema.Attribute.Component<'home.tot-section', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -708,6 +775,38 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiRatingRating extends Struct.CollectionTypeSchema {
+  collectionName: 'ratings';
+  info: {
+    description: '';
+    displayName: 'Feedback';
+    pluralName: 'ratings';
+    singularName: 'rating';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comment: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    full_name: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    job: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::rating.rating'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
   collectionName: 'teams';
   info: {
@@ -730,6 +829,36 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTotPageTotPage extends Struct.SingleTypeSchema {
+  collectionName: 'tot_pages';
+  info: {
+    description: '';
+    displayName: 'TOT Page';
+    pluralName: 'tot-pages';
+    singularName: 'tot-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tot-page.tot-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tot_hero: Schema.Attribute.Component<'sections.hero-blogs', false>;
+    tot_sections: Schema.Attribute.Component<'home.tot-section', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1282,10 +1411,14 @@ declare module '@strapi/strapi' {
       'api::contact.contact': ApiContactContact;
       'api::diploma.diploma': ApiDiplomaDiploma;
       'api::diplomas-page.diplomas-page': ApiDiplomasPageDiplomasPage;
+      'api::feedback-page.feedback-page': ApiFeedbackPageFeedbackPage;
       'api::footer.footer': ApiFooterFooter;
+      'api::form.form': ApiFormForm;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::navbar.navbar': ApiNavbarNavbar;
+      'api::rating.rating': ApiRatingRating;
       'api::team.team': ApiTeamTeam;
+      'api::tot-page.tot-page': ApiTotPageTotPage;
       'api::website.website': ApiWebsiteWebsite;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

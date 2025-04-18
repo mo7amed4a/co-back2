@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_tot_sections_tots",
+  "info": {
+    "displayName": "tot_sections_tot"
+  },
+  "options": {},
+  "attributes": {
+    "tot_sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.tot-section"
+    }
+  }
+}

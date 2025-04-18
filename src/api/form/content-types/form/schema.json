@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "workEmail": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "location": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "companySize": {
+      "type": "string"
+    },
+    "peopleToTrain": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "jobLevel": {
+      "type": "string"
+    },
+    "trainingNeeds": {
+      "type": "text"
+    }
+  }
+}

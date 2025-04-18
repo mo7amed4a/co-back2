@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_home_tot_sections",
+  "info": {
+    "displayName": "TOT section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

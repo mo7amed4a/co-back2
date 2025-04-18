@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_rating_sections",
+  "info": {
+    "displayName": "rating_section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating"
+    }
+  }
+}

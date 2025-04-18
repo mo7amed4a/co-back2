@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "tot_pages",
+  "info": {
+    "singularName": "tot-page",
+    "pluralName": "tot-pages",
+    "displayName": "TOT Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tot_hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero-blogs"
+    },
+    "tot_sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.tot-section"
+    }
+  }
+}

@@ -27,6 +27,16 @@ export interface ComponentsButton extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsDynamic extends Struct.ComponentSchema {
+  collectionName: 'components_components_dynamics';
+  info: {
+    displayName: 'dynamic';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsLinks extends Struct.ComponentSchema {
   collectionName: 'components_components_links';
   info: {
@@ -72,6 +82,31 @@ export interface ComponentsSocialSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsTotSection extends Struct.ComponentSchema {
+  collectionName: 'components_components_tot_sections';
+  info: {
+    displayName: 'tot_section';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsTotSectionsTot extends Struct.ComponentSchema {
+  collectionName: 'components_components_tot_sections_tots';
+  info: {
+    displayName: 'tot_sections_tot';
+  };
+  attributes: {
+    tot_sections: Schema.Attribute.Component<'components.tot-section', true>;
+  };
+}
+
 export interface FooterLink extends Struct.ComponentSchema {
   collectionName: 'components_footer_links';
   info: {
@@ -103,6 +138,47 @@ export interface FooterSocialLinksFooter extends Struct.ComponentSchema {
     instagram: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'https://instagram.com'>;
     x: Schema.Attribute.String & Schema.Attribute.DefaultTo<'https://x.com'>;
+  };
+}
+
+export interface HomeLogos extends Struct.ComponentSchema {
+  collectionName: 'components_home_logos';
+  info: {
+    displayName: 'logos';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title_section: Schema.Attribute.String;
+  };
+}
+
+export interface HomeRatingSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_rating_sections';
+  info: {
+    displayName: 'rating_section';
+  };
+  attributes: {
+    ratings: Schema.Attribute.Relation<'oneToMany', 'api::rating.rating'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeTotSection extends Struct.ComponentSchema {
+  collectionName: 'components_home_tot_sections';
+  info: {
+    description: '';
+    displayName: 'TOT section';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title_section: Schema.Attribute.String;
   };
 }
 
@@ -265,13 +341,19 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'about.social-links': AboutSocialLinks;
       'components.button': ComponentsButton;
+      'components.dynamic': ComponentsDynamic;
       'components.links': ComponentsLinks;
       'components.links-list': ComponentsLinksList;
       'components.question': ComponentsQuestion;
       'components.social-section': ComponentsSocialSection;
+      'components.tot-section': ComponentsTotSection;
+      'components.tot-sections-tot': ComponentsTotSectionsTot;
       'footer.link': FooterLink;
       'footer.social-links': FooterSocialLinks;
       'footer.social-links-footer': FooterSocialLinksFooter;
+      'home.logos': HomeLogos;
+      'home.rating-section': HomeRatingSection;
+      'home.tot-section': HomeTotSection;
       'sections.about-section': SectionsAboutSection;
       'sections.blogs': SectionsBlogs;
       'sections.faqs': SectionsFaqs;
